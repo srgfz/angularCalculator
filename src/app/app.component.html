@@ -1,0 +1,53 @@
+<div class="my-5 p-5 container-fluid col-6 bg-dark bg-opacity-75 d-flex flex-column aling-items-center">
+  <header class="pt-2 pb-4 text-light">
+    <h1 class="text-center">{{title}}</h1>
+    <h2 class="text-center fs-5">Sergio Fernández Nevado</h2>
+  </header>
+  
+  <body class=" bg-warning bg-opacity-50">
+    <form action="#" method="#" class="d-flex flex-column gap-4 p-3 justify-content-center aling-items-center">
+      <div class="d-flex flex-column justify-content-evenly col-8 mx-auto">
+        <label for="num1" class="fs-4 fw-bold">Número 1 </label>
+        <input type="number" id="num1" [(ngModel)]="num1" name="num1" (click)="reset($event)" placeholder="Introduzca el primer número" class="ms-3 px-3 py-2">
+      </div>
+      <div class="d-flex flex-column justify-content-evenly col-8 mx-auto">
+        <label for="num2" class="fs-4 fw-bold">Número 2 </label>
+        <input type="number" id="num2" [(ngModel)]="num2" name="num2" (click)="reset($event)" placeholder="Introduzca el segundo número (%)" class="ms-3 px-3 py-2">
+      </div>
+      
+      <div class="d-flex col-10 justify-content-center gap-3 flex-wrap col-8 mx-auto"  role="group" aria-label="Basic radio toggle button group">
+
+        <input type="radio" class="btn-check" name="btnradio" id="sumar" autocomplete="off">
+        <label class="btn btn-dark fs-5 px-3" for="sumar" (click)="sumar()"> + </label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="restar" autocomplete="off">
+        <label class="btn btn-dark fs-5 px-3" for="restar" (click)="restar()"> - </label>
+
+        
+        <input type="radio" class="btn-check" name="btnradio" id="multiplicar" autocomplete="off">
+        <label class="btn btn-dark fs-5 px-3" for="multiplicar" (click)="multiplicar()"> x </label>
+
+        
+        <input type="radio" class="btn-check" name="btnradio" id="dividir" autocomplete="off">
+        <label class="btn btn-dark fs-5 px-3" for="dividir" (click)="dividir()"> / </label>
+
+        
+        <input type="radio" class="btn-check" name="btnradio" id="potencia" autocomplete="off">
+        <label class="btn btn-dark fs-5 px-3" for="potencia" (click)="potencia()"> ^ </label>
+
+        
+        <input type="radio" class="btn-check" name="btnradio" id="porcentaje" autocomplete="off">
+        <label class="btn btn-dark fs-5 px-3" for="porcentaje" (click)="porcentaje()"> % </label>
+
+      </div>
+  
+      <div class="p-4 fs-4 d-flex gap-3 justify-content-center">
+        <span class="bg-dark bg-opacity-75 text-light px-3 py-2 col-8 text-center {{error === '' ?  'fs-4' : 'fs-5'}}"> {{error === "" ?  result : error}} </span>
+      </div>
+  
+  
+  
+    </form>
+  </body>
+  
+</div>
